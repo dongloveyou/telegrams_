@@ -1,1 +1,50 @@
+<?php
+class Display {
+    // Mã màu ANSI
+    public static $BLUE = "\e[34m";
+    public static $WHITE = "\e[97m";
+    public static $RESET = "\e[0m";
 
+    public static function clearScreen() {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+            system('cls');
+        } else {
+            system('clear');
+        }
+    }
+
+    public static function printBanner() {
+        self::clearScreen();
+        echo self::$BLUE . "
+███████ ██ ██      ██    ██ ███████ ██████  ████████  ██████   ██████  ███████ ██ ███    ██ ████████ 
+██      ██ ██      ██    ██ ██      ██   ██    ██    ██       ██    ██ ██      ██ ████   ██    ██    
+███████ ██ ██      ██    ██ █████   ██████     ██    ██   ███ ██    ██ ███████ ██ ██ ██  ██    ██    
+     ██ ██ ██       ██  ██  ██      ██   ██    ██    ██    ██ ██    ██      ██ ██ ██  ██ ██    ██    
+███████ ██ ███████   ████   ███████ ██   ██    ██     ██████   ██████  ███████ ██ ██   ████    ██    
+
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣾⣿⣿⣿⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣿⣿⡿⠿⠛⢙⣿⣿⠃
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣤⣶⣾⣿⣿⠿⠛⠋⠁⠀⠀⠀⣸⣿⣿⠀
+⠀⠀⠀⠀⣀⣤⣴⣾⣿⣿⡿⠟⠛⠉⠀⠀⣠⣤⠞⠁⠀⠀⣿⣿⡇⠀
+⠀⣴⣾⣿⣿⡿⠿⠛⠉⠀⠀⠀⢀⣠⣶⣿⠟⠁⠀⠀⠀⢸⣿⣿⠀⠀
+⠸⣿⣿⣿⣧⣄⣀⠀⠀⣀⣴⣾⣿⣿⠟⠁⠀⠀⠀⠀⠀⣼⣿⡿⠀⠀
+⠀⠈⠙⠻⠿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⢠⣿⣿⠇⠀⠀
+⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⡇⠀⣀⣄⡀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣠⣾⣿⣿⣿⣦⡀⠀⠀⣿⣿⡏⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⡿⠋⠈⠻⣿⣿⣦⣸⣿⣿⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠁⠀⠀⠀⠀⠈⠻⣿⣿⣿⠏⠀⠀⠀⠀
+                                   
+                                      Author : SilverX     Tg: t.me/silverxvip
+" . self::$RESET . "\n";
+    }
+
+    public static function printMenu() {
+        echo "\n" . self::$WHITE . "SILVERTGOSINT MENU:" . self::$RESET . "\n";
+        echo "1. Collect user messages\n";
+        echo "2. Collect group info\n";
+        echo "3. Collect user message statistics\n";
+        echo "4. Download all media in group\n";
+        echo "5. Exit\n";
+        echo "Select an option: ";
+    }
+}
