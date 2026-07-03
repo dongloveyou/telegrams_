@@ -1,4 +1,4 @@
-echo '{
+'{
     "name": "silverx/silvertgosint",
     "description": "Telegram OSINT Tool written in PHP powered by MadelineProto",
     "type": "project",
@@ -14,4 +14,4 @@ echo '{
             "danog/madelineproto": true
         }
     }
-}' > composer.json
+}
