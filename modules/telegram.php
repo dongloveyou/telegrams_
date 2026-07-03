@@ -5,11 +5,8 @@ class TelegramModule {
     private $mp;
 
     public function __construct() {
-        $settings = [
-            "logger" => ["max_size" => 0],
-            "serialization" => ["cleanup_before_serialization" => true]
-        ];
-        $this->mp = new API("session_file.madeline", $settings);
+        // Khởi tạo cơ bản tương thích hoàn toàn với MadelineProto 8.7.0
+        $this->mp = new API("session_file.madeline");
         $this->mp->start();
     }
 
