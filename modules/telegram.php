@@ -1,11 +1,10 @@
-  '<?php
+<?php
 use \danog\MadelineProto\API;
 
 class TelegramModule {
     private $mp;
 
     public function __construct() {
-        // Cấu hình ép buộc tương tác qua Terminal dòng lệnh cơ bản
         $settings = [
             "logger" => ["max_size" => 0],
             "serialization" => ["cleanup_before_serialization" => true]
@@ -115,5 +114,4 @@ class TelegramModule {
             echo "[-] Khong the tai file phuong tien: " . $e->getMessage() . "\n";
         }
     }
-}' 
-                              
+}
