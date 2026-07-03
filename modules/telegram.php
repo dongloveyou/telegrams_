@@ -115,5 +115,5 @@ class TelegramModule {
             echo "[-] Khong the tai file phuong tien: " . $e->getMessage() . "\n";
         }
     }
-}' > modules/telegram.php
+}' 
                               
