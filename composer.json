@@ -1,6 +1,6 @@
-'{
+{
     "name": "silverx/silvertgosint",
-    "description": "Telegram OSINT Tool written in PHP powered by MadelineProto",
+    "description": "Cong cu OSINT Telegram duoc viet bang PHP, phat trien boi MadelineProto.",
     "type": "project",
     "require": {
         "php": ">=8.2",
