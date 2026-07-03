@@ -1,1 +1,20 @@
-
+{
+    "name": "silverx/silvertgosint",
+    "description": "Telegram OSINT Tool written in PHP powered by MadelineProto",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "danog/madelineproto": "^8.0",
+        "ext-sqlite3": "*",
+        "ext-curl": "*",
+        "ext-mbstring": "*"
+    },
+    "config": {
+        "platform": {
+            "php": "8.1"
+        },
+        "allow-plugins": {
+            "danog/madelineproto": true
+        }
+    }
+}
