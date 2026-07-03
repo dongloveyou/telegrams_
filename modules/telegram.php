@@ -1,4 +1,4 @@
-echo '<?php
+  '<?php
 use \danog\MadelineProto\API;
 
 class TelegramModule {
